@@ -1,0 +1,6 @@
+---
+  - name: Install web service on different os version with ansible role
+    hosts: web-new
+    become: true
+    role:
+      - apache-web
