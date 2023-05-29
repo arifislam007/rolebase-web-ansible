@@ -1,0 +1,8 @@
+---
+  - name: open port 80/tcp on centos
+    firewalld:
+      port: 80/tcp
+      permanent: true
+      immediate: true
+      state: enabled
+    when: ansible_facts['os_family'] == "RedHat"

@@ -1,0 +1,8 @@
+---
+  - name: Copy app file to target location
+    copy:
+      src: files/index.html
+      dest: /var/www/html
+    notify:
+      - restart apache2
+      - restart httpd
